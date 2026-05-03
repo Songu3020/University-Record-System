@@ -1,4 +1,4 @@
-class Department:
+def register_student():
     COURSES = (
         "Math", "Physics", "Computer Science", "Biology", "Chemistry",
         "Statistics", "English", "Economics", "History", "Philosophy",
@@ -6,22 +6,41 @@ class Department:
         "Music", "Engineering", "Law", "Medicine", "Business"
     )
 
-    students = {}
+    university_record = {}
 
-    name = input("Enter name: ")
-    age = int(input("Enter age: "))
+    username = input("Enter username: ")
 
-    courses = input("Enter courses separated by comma: ")
+    while True:
 
-    address = input("Enter address: ")
+        username = input("Enter username: ")
+        if username in university_record:
+            print("Username already exist")
 
-    student = {
+        name = input("Enter name: ")
+        if name = " ":
+            print("name cannot be empty")
+            return 
+        age = int(input("Enter age: "))
+
+        courses = input("Enter courses separated by comma: ")
+
+        city = int 
+        zip_code = int(input("enter your zip code: "))
+
+
+    course = set()
+
+
+    students = {
         "name": name,
         "age": age,
         "courses": courses,
-        "address": address
+        "address": {
+                "city": city
+                "zip_code": zip_code
+        }
     }
-
+    university_record[username] = students
 
 
     print("Student added successfully!")
@@ -30,12 +49,15 @@ class Department:
 
 def main():
         print("Welcome to University Scores!")
-        print("1. Department")
+        print("1. Register student")
         print("2. Student")
         print("3. StudentId")
 
-        age = int(input("Enter department : "))
-        name = input("Enter Student Name : ")
-        courses = input("Enter s: ")
+        choice = input("Enter an option")
+
+        if choice == "1":
+            register_student():
+
+ 
 main()
 
